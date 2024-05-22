@@ -1,10 +1,10 @@
-import "package:flutter/material.dart";
-import "package:flutter/widgets.dart";
-import "package:kameti_app/app_widgets/AppBarWidget.dart";
-import "package:kameti_app/app_widgets/custom_text.dart";
-import "package:kameti_app/screens/kameti_history/widget/kameti_detail_widget.dart";
-import "package:kameti_app/utils/AppColor.dart";
-import "package:kameti_app/utils/Extensions.dart";
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:kameti_app/app_widgets/AppBarWidget.dart';
+import 'package:kameti_app/app_widgets/custom_text.dart';
+import 'package:kameti_app/screens/kameti_history/widget/kameti_detail_widget.dart';
+import 'package:kameti_app/utils/AppColor.dart';
+import 'package:kameti_app/utils/Extensions.dart';
 
 class UserDetailsScreen extends StatefulWidget {
   const UserDetailsScreen({super.key});
@@ -49,29 +49,29 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
                       clipBehavior: Clip.antiAlias,
                       headingRowHeight: 45,
-                      headingRowColor: WidgetStateProperty.all<Color>(AppColor.darkBlue),
+                      headingRowColor: MaterialStateProperty.all<Color>(AppColor.darkBlue),
                       columns: [
                         DataColumn(
                             label: CustomText(
-                          text: "Price",
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          fontColor: Colors.white,
-                        )),
+                              text: "Price",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              fontColor: Colors.white,
+                            )),
                         DataColumn(
                             label: CustomText(
-                          text: "months",
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          fontColor: Colors.white,
-                        )),
+                              text: "months",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              fontColor: Colors.white,
+                            )),
                         DataColumn(
                             label: CustomText(
-                          text: "Status",
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          fontColor: Colors.white,
-                        )),
+                              text: "Status",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              fontColor: Colors.white,
+                            )),
                       ],
                       rows: [
                         DataRow(cells: [
@@ -94,7 +94,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                 setState(() => isPay2 = !isPay2);
                               },
                               child: Text(
-                                isPay ? "Payed" : "Pay",
+                                isPay2 ? "Payed" : "Pay",
                                 style: TextStyle(color: isPay2 ? Colors.green : Colors.red),
                               ))),
                         ]),
@@ -106,7 +106,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                 setState(() => isPay3 = !isPay3);
                               },
                               child: Text(
-                                isPay ? "Payed" : "Pay",
+                                isPay3 ? "Payed" : "Pay",
                                 style: TextStyle(color: isPay3 ? Colors.green : Colors.red),
                               ))),
                         ]),
